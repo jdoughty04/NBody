@@ -5,13 +5,17 @@
 using NB::Universe;
 using NB::CelestialBody;
 
+// First argument is the amount of time that the simulation should run for.
+// Second argument is the tick speed; how much time between each new position calculation.
+// The file is inputted via cin
+// i.e. ./NBody 1000000000 1000 < dance10.txt  
 int main(int argc, char* argv[]) {
     std::string one = argv[1];
     std::string two = argv[2];
-    double T = std::__cxx11::stod(one);
-    double dT = std::__cxx11::stod(two);
+    int T = std::__cxx11::stod(one);
+    int dT = std::__cxx11::stod(two);
     cout << "T: " << T << " " << dT << endl;
-    double timeElapsed = 0;
+    int timeElapsed = 0;
     string file{std::istreambuf_iterator<char>(std::cin), std::istreambuf_iterator<char>()};
     bool done = false;
     stringstream input(file);

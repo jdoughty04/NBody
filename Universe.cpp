@@ -20,6 +20,8 @@ void Universe::draw(sf::RenderWindow& window) {
 CelestialBody& Universe::operator[] (int idx) {
     return bodies[idx];
 }
+
+// Step function to simulate one tick (some amount of seconds), moving each planet linearly based on existing forces
 void Universe::step(double seconds) {
     double massProduct;
     double squaredDistance;
@@ -65,6 +67,7 @@ double Universe::radius() {
     return rad;
 }
 
+// Reads file into universe object
 istream& operator >> (istream& in, Universe& u) {
     string line;
     getline(in, line);
