@@ -8,5 +8,5 @@ Arg 2 : The number of seconds simulated per frame (more accurate when smaller, b
 Example: ./NBody 100000000 100000 < planets.txt
 
 
-![Funny GIF](https://github.com/jdoughty04/NBody/simulate.gif)
+![NBody GIF](/simulate.gif)
 
